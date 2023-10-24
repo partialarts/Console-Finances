@@ -91,6 +91,7 @@ var totalProfitAndLoss = 0; // Stores the total profit and loss
 var totalChange = 0; // Stores the total change for all months
 var monthlyChange = 0; // Stores the monthly chang
 var maxIncrease = 0;
+var maxIncreaseDate;
 var maxDecrease = 0;
 
 
@@ -107,7 +108,8 @@ for (var i = 1; i < finances.length; i++) {
 
 for (var i = 1; i < finances.length; i++) {
   if (monthlyChange > finances[1]) {
-
+    maxIncrease = monthlyChange;
+    maxIncreaseDate = i+1;
   }
 }
 
@@ -117,5 +119,5 @@ console.log("----------------");
 console.log("Total Months: " + finances.length);
 console.log("Total: $" + totalProfitAndLoss);
 console.log("Average Change: " + (totalChange / (finances.length - 1)).toFixed(2)); // Print average change, rounding to 2 decimal places
-console.log("Greatest Increase in Profits/Losses: ")
+console.log("Greatest Increase in Profits/Losses: ", maxIncreaseDate, "$" + maxIncrease + ')')
 console.log("Greatest Decrease in Profits/Losses: ")
