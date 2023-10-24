@@ -86,3 +86,21 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+var profitAndLoss = 0; // Variable to store profit and loss
+var totalChange = 0; // Variable to store total change from month to month
+
+
+// Loops through the dataset from index 0, selecting the 2nd object of each array to add only the numbers
+for (var i = 0; i < finances.length; i++) {
+  profitAndLoss += finances[i][1];
+}
+
+console.log("Total Months: " + sum)
+
+console.log("Financial Analysis");
+console.log("----------------");
+console.log("Total Months: " + finances.length);
+console.log("Total: $" + profitAndLoss);
+
