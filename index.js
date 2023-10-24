@@ -89,7 +89,9 @@ var finances = [
 
 var totalProfitAndLoss = 0; // Stores the total profit and loss
 var totalChange = 0; // Stores the total change for all months
-var monthlyChange = 0; // Stores the monthly change
+var monthlyChange = 0; // Stores the monthly chang
+var maxIncrease = 0;
+var maxDecrease = 0;
 
 
 // Loops through the dataset from index 0, selecting the 2nd object of each array to count only the numbers
@@ -103,8 +105,17 @@ for (var i = 1; i < finances.length; i++) {
   totalChange += monthlyChange;
 }
 
+for (var i = 1; i < finances.length; i++) {
+  if (monthlyChange > finances[1]) {
+
+  }
+}
+
+// Print results of analysis to the console
 console.log("Financial Analysis");
 console.log("----------------");
 console.log("Total Months: " + finances.length);
 console.log("Total: $" + totalProfitAndLoss);
-console.log("Average Change: " + (totalChange / (finances.length - 1)).toFixed(2));
+console.log("Average Change: " + (totalChange / (finances.length - 1)).toFixed(2)); // Print average change, rounding to 2 decimal places
+console.log("Greatest Increase in Profits/Losses: ")
+console.log("Greatest Decrease in Profits/Losses: ")
