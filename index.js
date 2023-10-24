@@ -89,11 +89,12 @@ var finances = [
 
 var totalProfitAndLoss = 0; // Stores the total profit and loss
 var totalChange = 0; // Stores the total change for all months
-var monthlyChange = 0; // Stores the monthly chang
+var monthlyChange = 0; // Stores the monthly change
+var allChanges = []
 var maxIncrease = 0;
 var maxDecrease = 0;
-var increaseDate = ""
-var decreaseDate = ""
+var increaseDate;
+var decreaseDate;
 
 
 // Loops through the dataset from index 0, selecting the 2nd object of each array to count only the numbers
@@ -101,15 +102,19 @@ for (var i = 0; i < finances.length; i++) {
   totalProfitAndLoss += finances[i][1];
 }
 
-// Loops through the dataset from the second object (i) to count the monthly change, then adds these to get the total change
+// Loops through the dataset from i = 1 to count the monthly change from month 2, then adds these to get the total change
 for (var i = 1; i < finances.length; i++) {
-  monthlyChange = (finances[i][1] - finances[i - 1][1]);
+  monthlyChange = finances[i][1] - finances[i - 1][1];
   totalChange += monthlyChange;
+  allChanges.push(monthlyChange); // Push monthly changes to array
 }
 
-for (var i = 1; i < finances.length; i++) {
-  if (maxIncrease < monthlyChange) {
-    maxIncrease = monthlyChange;
+
+//Greatest increase
+for (var i = 0; i < allChanges.length; i++) {
+  totalChange += allChanges[i];
+  if (maxIncrease < allChanges[i]) {
+    maxIncrease = allChanges[i];
     increaseDate = finances[i+1][0];
   }
 }
@@ -120,5 +125,5 @@ console.log("----------------");
 console.log("Total Months: " + finances.length);
 console.log("Total: $" + totalProfitAndLoss);
 console.log("Average Change: " + (totalChange / (finances.length - 1)).toFixed(2)); // Print average change, rounding to 2 decimal places
-console.log("Greatest Increase in Profits/Losses: ", increaseDate, "$" + maxIncrease + ')')
+console.log("Greatest Increase in Profits/Losses: ", increaseDate, "($" + maxIncrease + ')')
 console.log("Greatest Decrease in Profits/Losses: ")
