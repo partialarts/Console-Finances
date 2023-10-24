@@ -87,28 +87,26 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
-var profitAndLoss = 0; // Variable to store profit and loss
+var months = [];
+var monthlyFigures = []; // Variable to store profit and loss
+var totalProfitAndLoss = 0;
 var totalChange = 0; // Variable to store total change from month to month
-var monthlyChange = 0;
+var monthlyChange;
 
+// Loops through the dataset to separate profit and loss and months into their named variables
+for (var i = 0; i < finances.length; i++) {
+  var position = finances[i];
+  months.push(position[0]);
+  monthlyFigures.push(position[1]);
+}
 
 // Loops through the dataset from index 0, selecting the 2nd object of each array to add only the numbers
-for (var i = 0; i < finances.length; i++) {
-  profitAndLoss += finances[i][1];
+for (var i = 0; i < monthlyFigures.length; i++) {
+  totalProfitAndLoss += monthlyFigures[i];
 }
-
-
-for (var i = 0; i < finances.length; i++) {
-  monthlyChange = finances[i][1] - finances[i][1] - 1;
-  totalChange += monthlyChange;
-}
-
-
 
 console.log("Financial Analysis");
 console.log("----------------");
 console.log("Total Months: " + finances.length);
-console.log("Total: $" + profitAndLoss);
-console.log("Average Change: " + (totalChange / finances.length - 1));
-
+console.log("Total: $" + totalProfitAndLoss);
+console.log("Average Change: " + (totalChange / (finances.length - 1)).toFixed(2));
