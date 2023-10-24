@@ -90,6 +90,7 @@ var finances = [
 
 var profitAndLoss = 0; // Variable to store profit and loss
 var totalChange = 0; // Variable to store total change from month to month
+var monthlyChange = 0;
 
 
 // Loops through the dataset from index 0, selecting the 2nd object of each array to add only the numbers
@@ -97,10 +98,17 @@ for (var i = 0; i < finances.length; i++) {
   profitAndLoss += finances[i][1];
 }
 
-console.log("Total Months: " + sum)
+
+for (var i = 0; i < finances.length; i++) {
+  monthlyChange = finances[i][1] - finances[i][1] - 1;
+  totalChange += monthlyChange;
+}
+
+
 
 console.log("Financial Analysis");
 console.log("----------------");
 console.log("Total Months: " + finances.length);
 console.log("Total: $" + profitAndLoss);
+console.log("Average Change: " + (totalChange / finances.length - 1));
 
