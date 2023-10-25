@@ -36,4 +36,4 @@ To see the code, open the DevTools by pressing Command+Option+I (macOS) or Contr
 
 ## License
 
-MIT - [See LICENSE file in repo](https://github.com/partialarts/portfolio/blob/main/LICENSE)
+MIT - [See LICENSE file in repo](https://github.com/partialarts/Console-Finances/blob/main/LICENSE)
