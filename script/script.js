@@ -87,17 +87,18 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+// Variables
 var totalProfitAndLoss = 0; // Stores the total profit and loss
-var monthlyChange = 0; // Stores the monthly change
+var monthlyChange = 0; // Stores the monthly change in profit/loss
 var totalChange = 0; // Stores the total change for all months
 var allChanges = []; // Array for storing all changes
-var maxIncrease = 0;
-var maxDecrease = 0;
-var increaseDate;
-var decreaseDate;
+var maxIncrease = 0; // Stores greatest monthy increase in profit/loss
+var maxDecrease = 0; // Stores greatest monthly decrease in profit/loss
+var increaseDate; // Stores month with the greatest increase in profit/loss
+var decreaseDate; // Stores month with the greatest decrease in profit/loss
 
 
-// Loops through the dataset from index 0, selecting the 2nd object of each array to count only the numbers
+// Loops through the dataset from index 0, selecting the 2nd item of each array to count only the numbers
 for (var i = 0; i < finances.length; i++) {
   totalProfitAndLoss += finances[i][1];
 }
@@ -129,6 +130,6 @@ console.log("Financial Analysis");
 console.log("----------------");
 console.log("Total Months: " + finances.length);
 console.log("Total: $" + totalProfitAndLoss);
-console.log("Average Change: " + (totalChange / (finances.length - 1)).toFixed(2)); // Print average change, rounding to nearest 100th
-console.log("Greatest Increase in Profits/Losses: ", increaseDate, "($" + maxIncrease + ')')
-console.log("Greatest Decrease in Profits/Losses: ", decreaseDate, "($" + maxDecrease + ')')
+console.log("Average Change: " + (totalChange / 2 / (finances.length - 1)).toFixed(2)); // Print average change, rounding to nearest 100th
+console.log("Greatest Increase in Profits/Losses: ", increaseDate, "($" + maxIncrease + ')');
+console.log("Greatest Decrease in Profits/Losses: ", decreaseDate, "($" + maxDecrease + ')');
