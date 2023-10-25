@@ -28,15 +28,11 @@ To see the code, open the DevTools by pressing Command+Option+I (macOS) or Contr
 
 ### External Tutorials and Resources
 
-* [Stack Overflow - How to Make a Background Blur in CSS?](https://www.scaler.com/topics/background-blur-css/) – Used for backdrop-filter in CSS
-* [CSS Variables - The var() Function](https://www.w3schools.com/css/css3_variables.asp)
-* [Stack Overflow - How to "z-index" to make a menu always on top of the content](https://stackoverflow.com/questions/10507143/how-to-z-index-to-make-a-menu-always-on-top-of-the-content)
-* [Stack Overflow - How to add a color overlay to a background image?](https://stackoverflow.com/questions/36679649/how-to-add-a-color-overlay-to-a-background-image) - Used to add colour overlay to page background
-* [Creating Fixed Headers with CSS](https://cssdeck.com/blog/creating-fixed-headers-with-css/) - Used for navigation
-* [CSS background-attachment Property](https://www.w3schools.com/cssref/pr_background-attachment.php) - Used to fix page background
-* [Profile Card Flexbox Tutorial](https://codepen.io/angeladelise/pen/XWmBQoK?editors=1100) - Used to clip profile image with circle
-* [A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-* [Media Queries Demystified: CSS Min-Width and Max-Width](https://www.emailonacid.com/blog/article/email-development/emailology_media_queries_demystified_min-width_and_max-width/)
+* [How to Add the Numbers in a JavaScript Array](https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/)
+* [Addition assignment (+=)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
+* [How to target a specific element in an array in Javascript](https://www.shecodes.io/athena/18637-how-to-target-a-specific-element-in-an-array-in-javascript)
+* [Array.prototype.push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+* [How to format a number with two decimals in JavaScript?](https://www.tutorialspoint.com/How-to-format-a-number-with-two-decimals-in-JavaScript#:~:text=Syntax&text=number.,be%20formatted%20with%20two%20decimals.)
 
 ## License
 
