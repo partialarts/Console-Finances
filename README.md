@@ -14,7 +14,7 @@ I spent some time organising the code once finished to ensure its readability, t
 
 ## Deployed Application
 
-* [Console Finances on GitHub Pages](https://partialarts.github.io/Console-finances/)
+* [Console Finances on GitHub Pages](https://partialarts.github.io/Console-Finances/)
 
 ## Usage
 
